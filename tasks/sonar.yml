@@ -6,7 +6,7 @@
   when: "sonar_jdbc_driver not in sonar_supported_db"
 
 - name: Install unzip
-  apt:
+  yum:
     name=unzip
   tags: sonar_setup
 

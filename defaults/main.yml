@@ -1,7 +1,7 @@
 ---
 
-sonar_major                              : "3"
-sonar_minor                              : "7.4"
+sonar_major                              : "5"
+sonar_minor                              : "1.2"
 sonar_listen_ip                          : "0.0.0.0"
 sonar_port                               : "9000"
 
@@ -81,36 +81,36 @@ sonar_projects                           :
 
 ## Sonar plugins
 #
-sonar_plugins_apt                        :
-    - "pylint"  ## pre dependency for python
+#sonar_plugins_apt                        :
+#    - "pylint"  ## pre dependency for python
 
 sonar_plugins                            :
-    - name  : "Python Support"
-      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/python/sonar-python-plugin/1.1/sonar-python-plugin-1.1.jar"
+    - name  : "Java script support"
+      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/javascript/sonar-javascript-plugin/1.6/sonar-javascript-plugin-1.6.jar"
 
-#    - name  : "Java script support"
-#      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/javascript/sonar-javascript-plugin/1.6/sonar-javascript-plugin-1.6.jar"
+    - name  : "Web HTML (included in HTML, JSP, JSF, Ruby, PHP, etc. pages"
+      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/sonar-web-plugin/2.1/sonar-web-plugin-2.1.jar"
 
-#    - name  : "Web HTML (included in HTML, JSP, JSF, Ruby, PHP, etc. pages"
-#      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/sonar-web-plugin/2.1/sonar-web-plugin-2.1.jar"
+    - name  : "XML support"
+      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/xml/sonar-xml-plugin/1.0.1/sonar-xml-plugin-1.0.1.jar"
 
-#    - name  : "XML support"
-#      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/xml/sonar-xml-plugin/1.0.1/sonar-xml-plugin-1.0.1.jar"
+    - name  : "Jira"
+      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/sonar-jira-plugin/1.2/sonar-jira-plugin-1.2.jar"
+
+#    - name  : "Python Support"
+#      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/python/sonar-python-plugin/1.1/sonar-python-plugin-1.1.jar"
 
 #    - name  : "German language"
 #      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/l10n/sonar-l10n-de-plugin/1.0/sonar-l10n-de-plugin-1.0.jar"
-
-#    - name  : "Jira"
-#      url   : "http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/sonar-jira-plugin/1.2/sonar-jira-plugin-1.2.jar"
-
 
 ## Most likely you dont need to edit
 sonar_service_state   : 'started'
 sonar_service_enabled : 'yes'
 sonar_version         : "{{sonar_major}}.{{sonar_minor}}"
-sonar_name            : "sonar-{{sonar_version}}"
-sonar_archive         : "sonar-{{sonar_version}}.zip"
-sonar_url             : "http://dist.sonar.codehaus.org/{{sonar_archive}}"
+sonar_name            : "sonarqube-{{sonar_version}}"
+sonar_archive         : "sonarqube-{{sonar_version}}.zip"
+sonar_url             : "https://sonarsource.bintray.com/Distribution/sonarqube/{{sonar_archive}}"
+#"http://dist.sonar.codehaus.org/{{sonar_archive}}"
 sonar_home_dir        : "{{sonar_base_dir}}/{{sonar_name}}"
 sonar_conf_dir        : "{{sonar_home_dir}}/conf"
 sonar_bin_dir         : "{{sonar_home_dir}}/bin"

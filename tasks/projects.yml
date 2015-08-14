@@ -1,6 +1,6 @@
 ---
 - name: projects | Install git
-  apt:
+  yum:
     name=git
 
 - name: projects | Create project directory

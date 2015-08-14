@@ -2,12 +2,12 @@
 dependencies: []
 
 galaxy_info:
-  author: Adham Helal
-  description: "Deploy sonar qube on Ubuntu 12.04"
+  author: Luke Pryor
+  description: "Deploy sonarqube on AWS linux AMI"
   min_ansible_version: 1.6
   platforms:
-  - name: Ubuntu
+  - name: Linux
     versions:
-    - precise
+    - ami-a10897d6
   categories:
   - development
